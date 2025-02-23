@@ -5,7 +5,7 @@ var rotating = false
 var rotation_duration = 1.0 
 var elapsed_time = 0.0
 
-func _process(delta):
+func _process(delta: float) -> void:
 	if rotating:
 		elapsed_time += delta
 		var progress = elapsed_time / rotation_duration
