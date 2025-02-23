@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=3 uid="uid://drvw4j13e4me3"]
+
+[ext_resource type="Texture2D" uid="uid://cxafjsrpuk7va" path="res://graphics/rod2.png" id="1_8yin0"]
+[ext_resource type="Script" path="res://scenes/rod_sprite.gd" id="2_3iysg"]
+[ext_resource type="Texture2D" uid="uid://bacivh8vjkspg" path="res://graphics/cigs2.png" id="2_mlbel"]
+[ext_resource type="AudioStream" uid="uid://dpq2eus3g78on" path="res://audio/ciggy_cough.mp3" id="4_7lpk6"]
+[ext_resource type="Script" path="res://scenes/cigs_sprite.gd" id="4_mmii0"]
+
+[node name="Fishin" type="Node2D"]
+
+[node name="RodSprite" type="Sprite2D" parent="."]
+position = Vector2(758, 391)
+scale = Vector2(0.766667, 0.735149)
+texture = ExtResource("1_8yin0")
+script = ExtResource("2_3iysg")
+
+[node name="CigsSprite" type="Sprite2D" parent="."]
+position = Vector2(236.75, 211.5)
+scale = Vector2(0.463235, 0.482398)
+texture = ExtResource("2_mlbel")
+script = ExtResource("4_mmii0")
+
+[node name="CiggyCough" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_7lpk6")
+volume_db = -21.082
+autoplay = true
